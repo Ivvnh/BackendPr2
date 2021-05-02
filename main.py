@@ -57,6 +57,10 @@ def getPacientes():
         Datos.append(objeto)
     return(jsonify(Datos))
 
+@app.route('/', methods=['GET'])
+def principal():
+    return("<h1>Hola, si funciono :)</h1>")
+
 
 #obtener solo un paciente
 @app.route('/Pacientes/<string:nombre>', methods=['GET'])
